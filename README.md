@@ -7,24 +7,25 @@
 ```bash
 git clone https://github.com/AlexeyAB/darknet.git
 ```
-For Yolo wegihts and configuration file, please download from https://drive.google.com/drive/folders/1u-phD02XehL7fl1aZ4vt6_nMVv2jNZ17?usp=sharing
+For Yolo wegihts and configuration file, please download from [ARE_explainability](https://drive.google.com/drive/folders/1u-phD02XehL7fl1aZ4vt6_nMVv2jNZ17?usp=sharing)
 
 2. Tensorflow
-Please download the legend neediness model from https://drive.google.com/drive/folders/1u-phD02XehL7fl1aZ4vt6_nMVv2jNZ17?usp=sharing
+Please download the legend neediness model from [ARE_explainability](https://drive.google.com/drive/folders/1u-phD02XehL7fl1aZ4vt6_nMVv2jNZ17?usp=sharing)
 
 # Method
 - Image preprocessing:
-	- Compound figure classification and compound figure separation. (Please refer to https://github.com/sciosci/graph_check)
+	- Compound figure classification and compound figure separation. (Please refer https://github.com/sciosci/graph_check)
 
 - Accessability:
 
 - Readability:
 
-- Explainability:
-	1. Legend detection on suplots: We fine-tuned YOLOv4 (pre-trained on MS COCO dataset) with around 1400 charts to detect legend in graph .
-	2. Legend detection on compound figures: We also detect on compound figures to check if legend exists.
-	3. Legend neediness classification: We fine-tuned ResNet152v2 (pre-trained on ImageNet) with arond 1500 charts. If a charts has more than one lines and symbols, we annotated as needed.
-	4. Legend descriptive words in caption: We analyze and count descriptive words in corresponding caption. (e.g. color words(red, blue, etc.), dashed line, solid line, triangle, square) 
+- Explainability: Focused on line charts.
+	1. Image classification: We fine-tuned YOLOv4 to classify charts into different categories (line charts, bar charts, ...). (Please refer https://github.com/sciosci/graph_check)
+	2. Legend detection on suplots: We fine-tuned YOLOv4 (pre-trained on MS COCO dataset) with around 1400 charts to detect legend in graph .
+	3. Legend detection on compound figures: We also detect on compound figures to check if legend exists.
+	4. Legend neediness classification: We fine-tuned ResNet152v2 (pre-trained on ImageNet) with arond 1500 charts. If a charts has more than one lines and symbols, we annotated as needed.
+	5. Legend descriptive words in caption: We analyze and count descriptive words in corresponding caption. (e.g. color words(red, blue, etc.), dashed line, solid line, triangle, square) 
 
 # Method Flowchart
 <img src="https://github.com/sciosci/ARE-analysis/blob/main/images/flowchart.png" alt="drawing" width="600"/>
