@@ -7,6 +7,9 @@
 ```bash
 git clone https://github.com/AlexeyAB/darknet.git
 ```
+For Yolo wegihts and configuration file, please download from https://drive.google.com/drive/folders/1u-phD02XehL7fl1aZ4vt6_nMVv2jNZ17?usp=sharing
+2. Tensorflow
+Please download the legend neediness model from https://drive.google.com/drive/folders/1u-phD02XehL7fl1aZ4vt6_nMVv2jNZ17?usp=sharing
 
 # Method
 
